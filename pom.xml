@@ -10,16 +10,16 @@
         <module>app</module>
     </modules>
     <scm>
-    <connection>scm:svn:https://github.com/sri008/maven-multi-module-example.git</connection>
-    <developerConnection>scm:https://github.com/sri008/maven-multi-module-example.git</developerConnection>
-    <url>https://github.com/sri008/maven-multi-module-example.git</url>
+        <connection>scm:http://github.com/sri008/maven-multi-module-example.git</connection>
+    <developerConnection>scm:git:http://github.com/sri008/maven-multi-module-example.git</developerConnection>
+    <url>http://github.com/sri008/maven-multi-module-example.git</url>
   </scm>
     <distributionManagement>
-  <snapshotRepository>
-    <id>nexus</id>
-    <url>http://15.206.134.180:8081/nexus/content/repositories/snapshots</url>
-  </snapshotRepository>
-</distributionManagement>
+        <repository>
+        <id>nexus</id>
+        <url>http://15.206.134.180:8081/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
@@ -28,6 +28,14 @@
                 <version>3.0.0-M1</version>
                 <configuration>
                 <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.11.2</version>
+                <configuration>
+                <connectionType>developerConnection</connectionType>
                 </configuration>
             </plugin>
          </plugins>
