@@ -9,4 +9,24 @@
         <module>core</module>
         <module>app</module>
     </modules>
+    <distributionManagement>
+        <repository>
+        <id>nexus</id>
+        <url>http://15.206.134.180:8081/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
+    <distributionManagement>
+     <snapshotRepository>
+        <id>nexus</id>
+        <url>http://15.206.134.180:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+    </distributionManagement>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
 </project>
