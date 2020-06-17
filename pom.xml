@@ -10,9 +10,9 @@
         <module>app</module>
     </modules>
     <scm>
-        <connection>scm:git:http://github.com/sri008/maven-multi-module-example.git</connection>
-    <developerConnection>scm:git:http://github.com/sri008/maven-multi-module-example.git</developerConnection>
-    <url>http://github.com/sri008/maven-multi-module-example.git</url>
+        <connection>scm:git:https://github.com/sri008/maven-multi-module-example.git</connection>
+    <developerConnection>scm:git:https://github.com/sri008/maven-multi-module-example.git</developerConnection>
+    <url>scm:git:https://github.com/sri008/maven-multi-module-example.git</url>
   </scm>
     <distributionManagement>
         <repository>
