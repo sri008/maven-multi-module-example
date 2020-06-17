@@ -20,7 +20,7 @@ pipeline {
       }
       stage('Update Rel') {
          steps {
-            sh label: '', script: 'git push https://github.com/sri008/maven-multi-module-example.git HEAD:master '
+            sh 'git push https://github.com/sri008/maven-multi-module-example.git HEAD:master'
          }
       }
    }
