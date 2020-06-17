@@ -20,7 +20,7 @@
         <url>http://15.206.134.180:8081/nexus/content/repositories/releases</url>
         </repository>
     </distributionManagement>
-   
+   <plugins>
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -29,4 +29,5 @@
           <tagNameFormat>v@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
+    </plugins>
 </project>
