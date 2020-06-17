@@ -15,7 +15,7 @@ pipeline {
       }
       stage('Release') {
          steps {
-            sh label: '', script: '/opt/maven/bin/mvn --batch-mode release:clean release:prepare release:perform'
+            sh '/opt/maven/bin/mvn --batch-mode release:clean release:prepare release:perform'
          }
       }
       stage('Update Rel') {
