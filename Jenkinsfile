@@ -18,10 +18,10 @@ pipeline {
             sh '/opt/maven/bin/mvn --batch-mode release:clean release:prepare release:perform -DreleseVersion=1.0 -DevelopmentVersion=1.1-SNAPSHOT'
          }
       }
-      stage('Update Rel') {
+      /*stage('Update Rel') {
          steps {
             sh 'git push https://sri008@github.com/sri008/maven-multi-module-example.git HEAD:master'
          }
-      }
+      }*/
    }
 }
