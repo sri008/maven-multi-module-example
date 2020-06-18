@@ -20,7 +20,6 @@ pipeline {
       }
       stage('Update Rel') {
          steps {
-            sh 'git config --global user.name "sri008"'
             sh 'git push https://sri008:kiri567sri@github.com/sri008/maven-multi-module-example.git HEAD:master'
          }
       }
