@@ -15,7 +15,7 @@ pipeline {
       }
       stage('Release') {
          steps {
-            sh '/opt/maven/bin/mvn --batch-mode release:clean release:prepare release:perform'
+            sh '/opt/maven/bin/mvn --batch-mode release:clean release:prepare release:perform -DreleseVersion=1.0 -DevelopmentVersion=1.1-SNAPSHOT'
          }
       }
       stage('Update Rel') {
